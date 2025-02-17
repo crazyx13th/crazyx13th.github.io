@@ -15,9 +15,6 @@
 		"vite-node": "^3.0.5"
 	},
 	"scripts": {
-		"packages:audit": "pnpm audit",
-		"packages:install": "pnpm install",
-		"packages:outdated": "pnpm outdated --recursive",
-		"area51:generate-matrix": "pnpm exec vite-node packages/react/scripts/github.packages.generate-matrix.ts --filter=[\\\"packages/react/packages/component/button/package.json\\\"]"
+		"build": ""
 	}
 }
