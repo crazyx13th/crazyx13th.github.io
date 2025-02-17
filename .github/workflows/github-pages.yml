@@ -48,7 +48,7 @@ jobs:
           cache: pnpm
       - name: Build hello-world
         run: |
-          pnpm --filter ./apps build
+          pnpm --filter "{apps}" build
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
