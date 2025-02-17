@@ -1,0 +1,65 @@
+name: deploy site to github pages
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+
+#  build:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: checkout
+#        uses: actions/checkout@v4
+#      - name: setup node
+#        uses: actions/setup-node@v4
+#        with:
+#          node-version: 22
+#          cache: pnpm
+#      - name: setup pages
+#        uses: actions/configure-pages@v5
+#        with:
+#          static_site_generator: next
+#      - name: restore cache
+#        uses: actions/cache@v4
+#        with:
+#          path: |
+#            .next/cache
+#          key: ${{ runner.os }}-nextjs-${{ hashfiles('pnpm-lock.yaml') }}-${{ hashfiles('**.[jt]s', '**.[jt]sx') }}
+#          restore-keys: |
+#            ${{ runner.os }}-nextjs-${{ hashfiles('pnpm-lock.yaml') }}-
+#      - name: install dependencies
+#        run: pnpm install
+#      - name: build with next.js
+#        run: pnpm run build
+#      - name: upload artifact
+#        uses: actions/upload-pages-artifact@v3
+#        with:
+#          path: ./out
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: './apps/hello-world'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

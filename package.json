@@ -1,0 +1,23 @@
+{
+	"name": "area51-monorepo",
+	"version": "1.0.0",
+	"description": "crazyx13th AREA51 Monorepo",
+	"repository": "https://github.com/crazyx13th/area51",
+	"private": true,
+	"type": "module",
+	"engines": {
+		"node": ">=22.14.0",
+		"npm": ">=10.9.2",
+		"pnpm": ">=10.4.0"
+	},
+	"packageManager": "pnpm@10.4.0",
+	"devDependencies": {
+		"vite-node": "^3.0.5"
+	},
+	"scripts": {
+		"packages:audit": "pnpm audit",
+		"packages:install": "pnpm install",
+		"packages:outdated": "pnpm outdated --recursive",
+		"area51:generate-matrix": "pnpm exec vite-node packages/react/scripts/github.packages.generate-matrix.ts --filter=[\\\"packages/react/packages/component/button/package.json\\\"]"
+	}
+}
