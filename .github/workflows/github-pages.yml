@@ -46,6 +46,9 @@ jobs:
         with:
           node-version: 22
           cache: pnpm
+      - name: Indexing
+        run: |
+          cp apps/index.html .gh-pages/index.html
       - name: Build hello-world
         run: |
           pnpm --filter "./apps/**" build
