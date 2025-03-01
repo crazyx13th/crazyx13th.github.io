@@ -1,0 +1,14 @@
+{
+	"name": "@crazyx13th/biome-config-nexorm",
+	"version": "1.0.0",
+	"description": "Nexorm Biome Config",
+	"license": "UNLICENSED",
+	"repository": "https://github.com/crazyx13th/crazyx13th.github.io",
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
+	},
+	"type": "module",
+	"exports": {
+		"./biome": "./biome.jsonc"
+	}
+}

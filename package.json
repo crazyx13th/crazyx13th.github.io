@@ -12,7 +12,9 @@
 	},
 	"packageManager": "pnpm@10.4.0",
 	"devDependencies": {
-		"vite-node": "^3.0.5"
+		"vite-node": "^3.0.7",
+		"@biomejs/biome": "1.9.4",
+		"@crazyx13th/biome-config-nexorm": "workspace:*"
 	},
 	"scripts": {
 		"build": ""

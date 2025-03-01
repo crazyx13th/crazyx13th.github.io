@@ -1,0 +1,3 @@
+{
+	"extends": ["@crazyx13th/biome-config-nexorm/biome"]
+}
