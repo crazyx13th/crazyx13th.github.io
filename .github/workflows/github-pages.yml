@@ -48,6 +48,7 @@ jobs:
           cache: pnpm
       - name: Indexing
         run: |
+          mkdir .gh-pages
           cp apps/index.html .gh-pages/index.html
       - name: Build hello-world
         run: |
