@@ -85,17 +85,15 @@
 
 			const data = await response.json();
 			const listElement = document.getElementById('directory-list');
-			document.getElementById('loader').style.display = 'none'; // Ladeanimation ausblenden
+			document.getElementById('loader').style.display = 'none';
 
 			data.forEach(file => {
 				if (file.type === 'dir') {
 					const listItem = document.createElement('li');
 					const link = document.createElement('a');
 
-					// Richtige URL zum Repository-Ordner auf GitHub
-					link.href = `https://crazyx13th.github.io/${file.path}`;
+					link.href = `https://crazyx13th.github.io/${file.name}`;
 					link.textContent = file.name;
-					link.target = "_blank"; // Öffnet in neuem Tab
 
 					listItem.appendChild(link);
 					listElement.appendChild(listItem);
@@ -107,9 +105,9 @@
 			}
 
 		} catch (error) {
-			console.error('Error fetching directory list:', error);
+			console.error('Error fetching api:', error);
 			document.getElementById('loader').style.display = 'none';
-			document.getElementById('directory-list').innerHTML = '<li>Failed to load directories</li>';
+			document.getElementById('directory-list').innerHTML = '<li>Failed to load api</li>';
 		}
 	})();
 </script>
