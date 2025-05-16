@@ -1,0 +1,9 @@
+{
+	"urls": [
+		"crazyx13th.local.io"
+	],
+	"certs": [
+							"crazyx13th.local",
+		   "html-hello-world.crazyx13th.local"
+	]
+}

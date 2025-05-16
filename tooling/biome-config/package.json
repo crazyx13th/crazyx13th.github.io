@@ -9,6 +9,6 @@
 	},
 	"type": "module",
 	"exports": {
-		"./biome": "./biome.jsonc"
+		"./default": "./biome.jsonc"
 	}
 }

@@ -1,0 +1,16 @@
+{
+	//	"extends": ["@crazyx13th/biome-config-nexorm/default"],
+
+	// test issues
+	// - https://github.com/biomejs/biome-intellij/issues/63
+	// - https://github.com/biomejs/biome/issues/5089
+
+	"overrides": [
+		{
+			"include": ["hosts.config.json"],
+			"formatter": {
+				"enabled": false
+			}
+		}
+	]
+}

@@ -1,0 +1,11 @@
+{
+	"extends": ["@crazyx13th/biome-config-nexorm/default"],
+	"overrides": [
+		{
+			"include": ["hosts.config.json"],
+			"formatter": {
+				"lineWidth": 10,
+			},
+		},
+	]
+}

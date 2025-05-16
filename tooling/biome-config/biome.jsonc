@@ -2,23 +2,33 @@
 {
 	// --------------------------------------------------------------------------------------------------------- common
 	"vcs": {
-		"useIgnoreFile": true
+		"useIgnoreFile": true,
 	},
 	"linter": {},
 	"formatter": {
-		"lineWidth": 120
+		"lineWidth": 120,
 	},
 	// ----------------------------------------------------------------------------------------------------- javascript
 	"javascript": {
 		"formatter": {
 			"quoteStyle": "single",
-			"semicolons": "asNeeded"
-		}
+			"semicolons": "asNeeded",
+		},
 	},
 	// ------------------------------------------------------------------------------------------------------------ css
 	"css": {
 		"formatter": {
-			"enabled": true
-		}
-	}
+			"enabled": true,
+		},
+	},
+	"overrides": [
+		{
+			"include": ["*.jsonc"],
+			"json": {
+				"formatter": {
+					"trailingCommas": "all",
+				},
+			},
+		},
+	],
 }

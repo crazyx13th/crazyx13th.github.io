@@ -8,15 +8,15 @@
 	"engines": {
 		"node": ">=v22.13.1",
 		"npm": ">=10.9.2",
-		"pnpm": ">=10.4.0"
+		"pnpm": ">=10.5.2"
 	},
-	"packageManager": "pnpm@10.4.0",
+	"packageManager": "pnpm@10.5.2",
 	"devDependencies": {
-		"vite-node": "^3.0.7",
-		"@biomejs/biome": "1.9.4",
-		"@crazyx13th/biome-config-nexorm": "workspace:*"
+		"@biomejs/biome": "1.9.5-nightly.81fdedb",
+		"@crazyx13th/biome-config-nexorm": "workspace:*",
+		"vite-node": "^3.0.7"
 	},
 	"scripts": {
-		"build": ""
+		"build-index": "vite-node -e 'import{ rename }from 'fs/promises';await rename('./apps/index.html','./.gh-pages/index.html')'"
 	}
 }

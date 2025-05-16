@@ -50,7 +50,7 @@ jobs:
         run: |
           mkdir .gh-pages
           cp apps/index.html .gh-pages/index.html
-      - name: Build hello-world
+      - name: Build html-hello-world
         run: |
           pnpm --filter "./apps/**" build
       - name: Setup Pages

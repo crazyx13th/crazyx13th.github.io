@@ -1,0 +1,20 @@
+{
+	"name": "@crazyx13th/local-reverse-proxy",
+	"version": "1.0.0",
+	"description": "local reverse proxy",
+	"license": "UNLICENSED",
+	"repository": "https://github.com/crazyx13th/crazyx13th.github.io",
+	"type": "module",
+	"private": true,
+	"engines": {
+		"node": ">=22.9.0",
+		"npm": ">=10.8.3"
+	},
+	"scripts": {
+		"local-reverse-proxy": "docker compose --project-name crazyx13th.github.local --file docker-compose.yml up --force-recreate --build --detach"
+	},
+	"dependencies": {
+		"vite-node": "^3.0.7"
+	},
+	"devDependencies": {}
+}
